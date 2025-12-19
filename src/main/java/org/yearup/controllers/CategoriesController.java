@@ -50,7 +50,7 @@ public class CategoriesController {
 
             return category;
         } catch (ResponseStatusException ex) {
-            throw ex; // preserve 404
+            throw ex;
         } catch (Exception ex) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad.");
         }
